@@ -7,6 +7,7 @@ A frontend application built with Angular.
 ### Initial setup
 
 1. Start Student API as a backend application on your local machine.
+   [Student API](https://github.com/lukaszszymczyk/student_api)
 
 2. Install all dependencies `npm install`
 
