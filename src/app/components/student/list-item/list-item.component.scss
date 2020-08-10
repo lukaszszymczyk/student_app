@@ -1,0 +1,22 @@
+@import 'src/app/styles/colors.scss';
+@import 'src/app/styles/layouts.scss';
+@import 'src/app/styles/variables.scss';
+
+.student-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 12px 6px 12px 6px;
+  font-size: 14px;
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__element {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

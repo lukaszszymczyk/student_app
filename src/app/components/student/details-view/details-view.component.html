@@ -1,0 +1,18 @@
+<div class="modal-student modal-body">
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="student-details">
+    <span class="student-details__name">{{ student.full_name }}</span>
+    <span class="student-details__type">{{ student.field_of_study.name }}</span>
+    <span class="student-details__faculty">{{ student.faculty }}</span>
+    <span class="student-details__university">{{ student.university }}</span>
+
+    <button class="button-delete btn btn-default" (click)="deleteStudent()">
+      <span class="icon is-small">
+        <i class="fas fa-trash"></i>
+      </span>
+      <span> Delete student</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+@mixin modal_layout {
+  background: $app-background;
+  border-radius: 8px;
+  padding: 20px;
+}
+@mixin modal_layout_mobile {
+  height: calc(100vh - 20px);
+  margin: 0;
+  padding: 0;
+}

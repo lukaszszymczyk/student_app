@@ -1,0 +1,38 @@
+@import 'src/app/styles/colors.scss';
+@import 'src/app/styles/layouts.scss';
+@import 'src/app/styles/variables.scss';
+:host {
+  @include modal_layout;
+  @media (max-width: $mobile) {
+    @include modal_layout_mobile;
+  }
+  .modal-student {
+    height: 100%;
+  }
+  .form-student {
+    height: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &__label {
+      color: $header-gray;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &__input {
+      border: none;
+    }
+    textarea {
+      resize: none;
+    }
+    .button-save {
+      margin-top: 16px;
+      width: 100%;
+      @media (max-width: $mobile) {
+        margin-top: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

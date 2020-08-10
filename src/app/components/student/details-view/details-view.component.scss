@@ -1,0 +1,31 @@
+@import 'src/app/styles/colors.scss';
+@import 'src/app/styles/layouts.scss';
+@import 'src/app/styles/variables.scss';
+:host {
+  @include modal_layout;
+  @media (max-width: $mobile) {
+    @include modal_layout_mobile;
+  }
+  .modal-student {
+    height: 100%;
+  }
+  .student-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    &__name {
+      font-weight: bold;
+    }
+    .button-delete {
+      border: 0;
+      background-color: $app-background;
+      color: $delete-color;
+      margin-top: 16px;
+      width: 100%;
+      @media (max-width: $mobile) {
+        margin-top: auto;
+      }
+    }
+  }
+}

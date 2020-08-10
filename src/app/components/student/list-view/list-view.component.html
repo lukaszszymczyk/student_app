@@ -1,0 +1,31 @@
+<div class="header">
+  <button class="button-add btn btn-primary" (click)="openAddStudentModal()">
+    <span class="icon is-small">
+      <i class="fas fa-plus"></i>
+    </span>
+    <span> New student</span>
+  </button>
+</div>
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll(srollAvailable)">
+  <div class="student-list">
+    <div class="student-list__header">
+      <div id="name">
+        <h3>Name</h3>
+      </div>
+      <div id="field_of_type">
+        <h3>Field of Study</h3>
+      </div>
+      <div id="faculty">
+        <h3>Faculty</h3>
+      </div>
+      <div id="university">
+        <h3>University</h3>
+      </div>
+    </div>
+    <ul class="list-unstyled">
+      <li class="student-list__item" *ngFor="let student of studentList$ | async">
+        <app-list-item [student]="student"></app-list-item>
+      </li>
+    </ul>
+  </div>
+</div>

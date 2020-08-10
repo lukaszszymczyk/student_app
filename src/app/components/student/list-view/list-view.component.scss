@@ -1,0 +1,40 @@
+@import 'src/app/styles/colors.scss';
+@import 'src/app/styles/layouts.scss';
+@import 'src/app/styles/variables.scss';
+:host {
+  display: block;
+  padding: 16px 80px;
+  @media (max-width: $mobile) {
+    padding: 12px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    .button-add {
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .student-list {
+    margin-top: 24px;
+    &__header {
+      color: silver;
+      margin-bottom: 8px;
+      font-size: 0.9em;
+      font-weight: bold;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &__item {
+      background-color: $item-color;
+      border-radius: 4px;
+      margin: 8px 0;
+    }
+  }
+}
